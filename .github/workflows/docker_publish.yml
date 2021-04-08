@@ -29,21 +29,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.TOKEN }}
-          submodules: 'recursive'
 
-      - name: Build live image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME --build-arg TOKEN=$TOKEN
-        env:
-          TOKEN: ${{ secrets.TOKEN }}
+      - name: Build image
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME 
 
       - name: Log into registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.PERSONAL_ACCESS_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Push live image
+      - name: Push Image to registry
         run: |
-          IMAGE_ID_LIVE=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
+          IMAGE_ID_LIVE=ghcr.io/${{ github.repository }}/$IMAGE_NAME
 
           # Change all uppercase to lowercase
           IMAGE_ID_LIVE=$(echo $IMAGE_ID_LIVE | tr '[A-Z]' '[a-z]')
@@ -55,7 +50,7 @@ jobs:
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
 
           # Use Docker `latest` tag convention
-          [ "$VERSION" == "master" ] && VERSION=latest
+          [ "$VERSION" == "main" ] && VERSION=latest
 
           echo IMAGE_ID_LIVE=$IMAGE_ID_LIVE
           echo VERSION=$VERSION
