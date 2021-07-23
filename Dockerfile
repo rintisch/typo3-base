@@ -2,7 +2,7 @@
 # Improved with https://hadolint.github.io/hadolint/
 ####################################################
 
-FROM nginx:1.19.8
+FROM nginx:1.21.1
 
 ARG TOKEN 
 ARG ROOT_PATH=/var/www/html
@@ -101,7 +101,7 @@ RUN apt-get update && \
     apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
     # Directory /run/php is needed for php7.4-fpm.sock
-RUN mkdir -p /run/php && \
+    RUN mkdir -p /run/php && \
     # Directory /nonexistent which is needed for "composer config -g ..."
     mkdir -p /nonexistent && \
     chown nginx:nginx /nonexistent && \
