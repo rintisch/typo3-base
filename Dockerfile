@@ -116,7 +116,7 @@ RUN apt-get update && \
 
 # Copy server configuration 
 COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
-COPY etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+COPY etc/nginx/conf.d/default-base.conf /etc/nginx/conf.d/default-base.conf
 COPY etc/php /etc/php
 COPY etc/crontab /etc/crontab
 COPY etc/supervisord.conf /etc/supervisord.conf
