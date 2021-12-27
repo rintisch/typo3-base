@@ -96,6 +96,7 @@ RUN apt-get update && \
     dpkg -i wkhtmltox_0.12.5-1.stretch_amd64.deb && \
     cp /usr/local/bin/wkhtmltopdf /usr/bin/ && \
     cp /usr/local/bin/wkhtmltoimage /usr/bin/ && \
+    rm /wkhtmltox_0.12.5-1.stretch_amd64.deb && \
     # run sed (=Stream EDitor) to enable rendering of pictures from images by ImageMagick
     sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<!-- <policy domain="coder" rights="none" pattern="PDF" \/> -->/g' /etc/ImageMagick-6/policy.xml && \
     # remove cache
