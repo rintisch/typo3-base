@@ -1,0 +1,10 @@
+/var/www/html/var/log/*.log {
+    daily
+    missingok
+    rotate 28
+    compress
+    delaycompress
+    notifempty
+    create 664 nginx nginx
+    sharedscripts
+}

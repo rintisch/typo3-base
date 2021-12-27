@@ -120,6 +120,7 @@ COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY etc/nginx/conf.d/default-base.conf /etc/nginx/conf.d/default-base.conf
 COPY etc/php /etc/php
 COPY etc/crontab /etc/crontab
+COPY etc/logrotate.d /etc/logrotate.d
 COPY etc/supervisord.conf /etc/supervisord.conf
 
 # Configure volumes
