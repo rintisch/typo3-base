@@ -2,7 +2,7 @@
 # Improved with https://hadolint.github.io/hadolint/
 ####################################################
 
-FROM nginx:1.21.1
+FROM nginx:1.21.4
 
 ARG TOKEN 
 ARG ROOT_PATH=/var/www/html
@@ -24,6 +24,7 @@ RUN apt-get update && \
     apt-get install -yqq --no-install-recommends --no-install-suggests \
         apache2-utils \
         apt-transport-https \
+        bash \
         ca-certificates \
         curl \
         ghostscript \
@@ -31,14 +32,14 @@ RUN apt-get update && \
         gnupg2 \
         libgs-dev \
         locales \
+        logrotate \
         lsb-release \
         imagemagick\
         msmtp \
         openrc \
         tini \
+        vim \
         zip \
-        nano \
-        bash \
         xfonts-75dpi xfonts-base gvfs colord glew-utils libvisual-0.4-plugins gstreamer1.0-tools opus-tools qt5-image-formats-plugins qtwayland5 qt5-qmltooling-plugins librsvg2-bin lm-sensors \
         supervisor \
         wget && \
