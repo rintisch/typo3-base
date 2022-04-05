@@ -30,6 +30,7 @@ RUN apt-get update && \
         ghostscript \
         git \
         gnupg2 \
+        less \
         libgs-dev \
         locales \
         logrotate \
