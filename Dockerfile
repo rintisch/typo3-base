@@ -90,12 +90,6 @@ RUN apt-get update && \
     chmod +x "$SUPERCRONIC" && \
     mv "$SUPERCRONIC" "/usr/local/bin/${SUPERCRONIC}" && \
     ln -s "/usr/local/bin/${SUPERCRONIC}" /usr/local/bin/supercronic && \
-    # install wkhtmltopdf for PDF creation
-    wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb &&\
-    dpkg -i wkhtmltox_0.12.5-1.stretch_amd64.deb && \
-    cp /usr/local/bin/wkhtmltopdf /usr/bin/ && \
-    cp /usr/local/bin/wkhtmltoimage /usr/bin/ && \
-    rm /wkhtmltox_0.12.5-1.stretch_amd64.deb && \
     # run sed (=Stream EDitor) to enable rendering of pictures from images by ImageMagick
     sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<!-- <policy domain="coder" rights="none" pattern="PDF" \/> -->/g' /etc/ImageMagick-6/policy.xml && \
     # remove cache
