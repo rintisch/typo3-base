@@ -1,2 +1,2 @@
 #!/bin/sh
-* * * * * /usr/bin/php /var/www/html/public/typo3/sysext/core/bin/typo3 scheduler:run
+* * * * * /usr/bin/php /var/www/html/vendor/bin/typo3 scheduler:run
