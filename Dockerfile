@@ -2,7 +2,7 @@
 # Improved with https://hadolint.github.io/hadolint/
 ####################################################
 
-FROM nginx:1.21.6
+FROM nginx:1.23.2
 
 ARG TOKEN 
 ARG ROOT_PATH=/var/www/html
