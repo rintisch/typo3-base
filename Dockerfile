@@ -76,8 +76,8 @@ RUN apt-get update && \
     php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Composer Installer verified'; } else { echo 'Composer Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" && \
     php composer-setup.php --install-dir=/usr/bin --filename=composer && \
     php -r "unlink('composer-setup.php');" && \
-    # Install yarn & nodejs v12
-    curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+    # Install yarn & nodejs v16
+    curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install --no-install-recommends  --no-install-suggests -y\
