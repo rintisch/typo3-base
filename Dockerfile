@@ -30,20 +30,21 @@ RUN apt-get update && \
         ghostscript \
         git \
         gnupg2 \
+        imagemagick\
         less \
         libgs-dev \
         locales \
         logrotate \
         lsb-release \
-        imagemagick\
         msmtp \
         openrc \
-        tini \
-        vim \
-        zip \
-        xfonts-75dpi xfonts-base gvfs colord glew-utils libvisual-0.4-plugins gstreamer1.0-tools opus-tools qt5-image-formats-plugins qtwayland5 qt5-qmltooling-plugins librsvg2-bin lm-sensors \
         supervisor \
-        wget && \
+        tini \
+        unzip \
+        vim \
+        wget \
+        xfonts-75dpi xfonts-base gvfs colord glew-utils libvisual-0.4-plugins gstreamer1.0-tools opus-tools qt5-image-formats-plugins qtwayland5 qt5-qmltooling-plugins librsvg2-bin lm-sensors \
+        zip && \
         # add sury repository to install wanted php version
         # !!! changes of php version must also be done in `supervisord.conf` and in `./etc/php/*`
     wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg && \
