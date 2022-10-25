@@ -6,13 +6,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.1.0] - 2021-04-05
+## [2.3.0] - 2022-10-25
+### Added
+- `unzip` in container
+
+### Changed
+- Version of nodejs in container (v12 -> v16)
+- Update to latest base image `nginx:1.23.2`
+- Use `actions/checkout@v3` in github Actions
+
+## [2.2.1] - 2022-07-15
+### Changed
+- Fix cronjob to run TYPO3 scheduler
+
+## [2.2.0] - 2022-05-12
+### Added
+- Sent cache header for all kind of fonts
+
+### Changed
+- Try to fix logrotate
+
+## [2.1.0] - 2022-04-05
 ### Added
 - Add Changelog file.
 
 ### Changed
 - Improve `README.md`.
-- update to latest base image `nginx:1.21.6`
+- Update to latest base image `nginx:1.21.6`
 
 ### Removed
 - Do not install [`wkhtmltopdf`](https://github.com/wkhtmltopdf/wkhtmltopdf) any longer in the base image.
