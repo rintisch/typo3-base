@@ -2,16 +2,17 @@
 # Improved with https://hadolint.github.io/hadolint/
 ####################################################
 
-FROM nginx:1.23.2
+FROM nginx:1.23.3
 
 ARG TOKEN 
 ARG ROOT_PATH=/var/www/html
 ARG LOCALE_LANG_COUNTRY="de_DE"
 ARG LOCALE_CODIFICATION="UTF-8"
 
-ARG SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.1.9/supercronic-linux-amd64
+# Install instructions for supercronic: https://github.com/aptible/supercronic/releases
+ARG SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.2.1/supercronic-linux-amd64
 ARG SUPERCRONIC=supercronic-linux-amd64
-ARG SUPERCRONIC_SHA1SUM=5ddf8ea26b56d4a7ff6faecdd8966610d5cb9d85
+ARG SUPERCRONIC_SHA1SUM=d7f4c0886eb85249ad05ed592902fa6865bb9d70
 
 # Variables for supercronic, TYPO3, PHP
 ENV TYPO3_CONTEXT=Production/Live \
