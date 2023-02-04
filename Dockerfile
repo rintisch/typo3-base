@@ -16,7 +16,7 @@ ARG SUPERCRONIC_SHA1SUM=d7f4c0886eb85249ad05ed592902fa6865bb9d70
 
 # Variables for supercronic, TYPO3, PHP
 ENV TYPO3_CONTEXT=Production/Live \
-    PHP_INI_SCAN_DIR=/etc/php/8.1/fpm/conf.d
+    PHP_INI_SCAN_DIR=/etc/php/8.2/fpm/conf.d
 
 # see https://github.com/hadolint/hadolint/wiki/DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -52,25 +52,25 @@ RUN apt-get update && \
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list && \
     apt-get update && \
     apt-get install --no-install-recommends --no-install-suggests -y \
-        php8.1 \
-        php8.1-apcu \
-        php8.1-cli \
-        php8.1-common \
-        php8.1-curl \
-        php8.1-dom \
-        php8.1-fpm \
-        php8.1-gd \
-        php8.1-intl \
-        php8.1-mbstring \
-        php8.1-mysql \
-        php8.1-opcache \
-        php8.1-pdo \
-        php8.1-pgsql \
-        php8.1-redis \
-        php8.1-sqlite3 \
-        php8.1-tokenizer \
-        php8.1-xml \
-        php8.1-zip && \
+        php8.2 \
+        php8.2-apcu \
+        php8.2-cli \
+        php8.2-common \
+        php8.2-curl \
+        php8.2-dom \
+        php8.2-fpm \
+        php8.2-gd \
+        php8.2-intl \
+        php8.2-mbstring \
+        php8.2-mysql \
+        php8.2-opcache \
+        php8.2-pdo \
+        php8.2-pgsql \
+        php8.2-redis \
+        php8.2-sqlite3 \
+        php8.2-tokenizer \
+        php8.2-xml \
+        php8.2-zip && \
     # Install composer:
     # Get it and hash; install if hash is verified; install globally; delete created install file
     curl -sS https://getcomposer.org/installer -o composer-setup.php && \
@@ -98,7 +98,7 @@ RUN apt-get update && \
     # remove cache
     apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-    # Directory /run/php is needed for php8.1-fpm.sock
+    # Directory /run/php is needed for php8.2-fpm.sock
     RUN mkdir -p /run/php && \
     # Directory /nonexistent which is needed for "composer config -g ..."
     mkdir -p /nonexistent && \

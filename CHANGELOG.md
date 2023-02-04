@@ -6,8 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Update to latest base image `nginx:1.23.3`
-- Update supercronic to `v0.2.1`
+- Lift to base image `nginx:1.23.3`.
+- Lift supercronic to `v0.2.1`.
+- Lift `PHP` version from `7.4` to `8.1`.
 
 ## [2.3.0] - 2022-10-25
 ### Added
