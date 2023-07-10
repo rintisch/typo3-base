@@ -2,7 +2,7 @@
 # Improved with https://hadolint.github.io/hadolint/
 ####################################################
 
-FROM nginx:1.23.3
+FROM nginx:1.25.1
 
 ARG TOKEN 
 ARG ROOT_PATH=/var/www/html
@@ -124,5 +124,3 @@ COPY etc/supervisord.conf /etc/supervisord.conf
 VOLUME ${ROOT_PATH}/public/fileadmin
 VOLUME ${ROOT_PATH}/public/typo3temp
 VOLUME ${ROOT_PATH}/public/uploads
-VOLUME ${ROOT_PATH}/var/labels
-VOLUME ${ROOT_PATH}/config/sites
