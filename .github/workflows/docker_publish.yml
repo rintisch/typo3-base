@@ -6,7 +6,7 @@ on:
       - v*
 
 env:
-  IMAGE_NAME: typo3_base
+  IMAGE_NAME: typo3-base
   OWNER: rintisch
   REGISTRY: ghcr.io
 
