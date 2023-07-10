@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2023-07-10
+### Changed
+- Lift to base image `nginx:1.25.1`.
+- Create image according to Semantic Versioning not only with patch version but also with major and minor version.
+- Changed name of resulting image from `docker.pkg.github.com/rintisch/typo3-base/nginx-typo3-base` to `ghcr.io/rintisch/typo3-base`.
+
 ## [2.4.0] - 2023-02-04
 ### Added
 - Add .gitignore
