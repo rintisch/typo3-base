@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2023-09-19
+### Added
+* Add apt package `patch` to enable installation of patches.
+
+### Removed
+* Removed docker default volumes for site configurations and labels.
+
 ## [3.0.0] - 2023-07-10
 ### Changed
 - Lift to base image `nginx:1.25.1`.
@@ -86,3 +93,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Remove basic auth.
+

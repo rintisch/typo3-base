@@ -32,6 +32,7 @@ RUN apt-get update && \
         git \
         gnupg2 \
         imagemagick\
+	iputils-ping \
         less \
         libgs-dev \
         locales \
@@ -39,6 +40,7 @@ RUN apt-get update && \
         lsb-release \
         msmtp \
         openrc \
+	patch \
         supervisor \
         tini \
         unzip \
@@ -108,9 +110,7 @@ RUN apt-get update && \
     # Create volume folder
     mkdir -p ${ROOT_PATH}/public/typo3temp && \
     mkdir -p ${ROOT_PATH}/public/fileadmin && \
-    mkdir -p ${ROOT_PATH}/public/uploads && \
-    mkdir -p ${ROOT_PATH}/config/sites && \
-    mkdir -p ${ROOT_PATH}/var/labels
+    mkdir -p ${ROOT_PATH}/public/uploads
 
 # Copy server configuration 
 COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
