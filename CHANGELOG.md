@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.0] - 2023-11-17
+### Updated
+* Update `nodejs` version which also contains `npm`
+
 ## [3.1.0] - 2023-09-19
 ### Added
 * Add apt package `patch` to enable installation of patches.
