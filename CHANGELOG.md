@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated
 * Update `nodejs` version which also contains `npm`
 
+### Changed
+- Lift to base image `nginx:1.25.3`.
+
 ## [3.1.0] - 2023-09-19
 ### Added
 * Add apt package `patch` to enable installation of patches.
