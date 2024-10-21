@@ -15,14 +15,13 @@ jobs:
   # See also https://docs.docker.com/docker-hub/builds/
   push:
     # Ensure test job passes before pushing image.
-    # needs: test
 
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME 
