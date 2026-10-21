@@ -16,7 +16,7 @@ ARG SUPERCRONIC_SHA1SUM=d7f4c0886eb85249ad05ed592902fa6865bb9d70
 
 # Variables for supercronic, TYPO3, PHP
 ENV TYPO3_CONTEXT=Production/Live \
-    PHP_INI_SCAN_DIR=/etc/php/8.5/fpm/conf.d
+    PHP_INI_SCAN_DIR=/etc/php/8.4/fpm/conf.d
 
 # see https://github.com/hadolint/hadolint/wiki/DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -56,24 +56,25 @@ RUN apt-get update && \
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list && \
     apt-get update && \
     apt-get install --no-install-recommends --no-install-suggests -y \
-        php8.5 \
-        php8.5-apcu \
-        php8.5-cli \
-        php8.5-common \
-        php8.5-curl \
-        php8.5-dom \
-        php8.5-fpm \
-        php8.5-gd \
-        php8.5-intl \
-        php8.5-mbstring \
-        php8.5-mysql \
-        php8.5-pdo \
-        php8.5-pgsql \
-        php8.5-redis \
-        php8.5-sqlite3 \
-        php8.5-tokenizer \
-        php8.5-xml \
-        php8.5-zip && \
+        php8.4 \
+        php8.4-apcu \
+        php8.4-cli \
+        php8.4-common \
+        php8.4-curl \
+        php8.4-dom \
+        php8.4-fpm \
+        php8.4-gd \
+        php8.4-intl \
+        php8.4-mbstring \
+        php8.4-mysql \
+        php8.4-opcache \
+        php8.4-pdo \
+        php8.4-pgsql \
+        php8.4-redis \
+        php8.4-sqlite3 \
+        php8.4-tokenizer \
+        php8.4-xml \
+        php8.4-zip && \
     # Install composer:
     # Get it and hash; install if hash is verified; install globally; delete created install file
     curl -sS https://getcomposer.org/installer -o composer-setup.php && \
@@ -101,7 +102,7 @@ RUN apt-get update && \
     # remove cache
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-    # Directory /run/php is needed for php8.5-fpm.sock
+    # Directory /run/php is needed for php8.4-fpm.sock
     RUN mkdir -p /run/php && \
     # Directory /nonexistent which is needed for "composer config -g ..."
     mkdir -p /nonexistent && \
