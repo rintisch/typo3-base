@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.2] - 2026-10-21
+### Changed
+- Use `actions/checkout@v7` (before `v4`)
+
 ## [3.4.1] - 2026-10-21
 ### Changed
 - Lift Node.js from v20 to v24
