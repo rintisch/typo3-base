@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.6] - 2026-10-21
+### Changed
+- Fix apt-get autoremove during build 
+
 ## [3.4.5] - 2026-10-21
 ### Changed
 - Fix path to ImageMagick to allow processing of PDFs
