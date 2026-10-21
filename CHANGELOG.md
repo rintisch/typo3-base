@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.0] - 2026-10-21
+### Changed
+- Lift to base image `nginx:1.30.6`.
+- Lift PHP version from `8.3` to `8.5`.
+
 ## [3.3.0] - 2024-10-21
 ### Added
 * Add apt package `telnet`.
