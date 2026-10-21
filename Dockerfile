@@ -97,7 +97,7 @@ RUN apt-get update && \
     mv "$SUPERCRONIC" "/usr/local/bin/${SUPERCRONIC}" && \
     ln -s "/usr/local/bin/${SUPERCRONIC}" /usr/local/bin/supercronic && \
     # run sed (=Stream EDitor) to enable rendering of pictures from images by ImageMagick
-    sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<!-- <policy domain="coder" rights="none" pattern="PDF" \/> -->/g' /etc/ImageMagick-6/policy.xml && \
+    sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<!-- <policy domain="coder" rights="none" pattern="PDF" \/> -->/g' /etc/ImageMagick-7/policy.xml && \
     # remove cache
     apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
