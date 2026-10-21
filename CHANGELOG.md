@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.7] - 2026-10-21
+### Changed
+- Lift to base image `nginx:1.31.7`.
+
 ## [3.4.6] - 2026-10-21
 ### Changed
 - Fix apt-get autoremove during build 
