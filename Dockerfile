@@ -67,7 +67,6 @@ RUN apt-get update && \
         php8.5-intl \
         php8.5-mbstring \
         php8.5-mysql \
-        php8.5-opcache \
         php8.5-pdo \
         php8.5-pgsql \
         php8.5-redis \

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.3] - 2026-10-21
+### Changed
+- Remove package php8.5-opcache (does not exist in PHP8.5 any longer (is included)).
+
 ## [3.4.2] - 2026-10-21
 ### Changed
 - Use `actions/checkout@v7` (before `v4`)
